@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nexur K Portal</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&display=swap');
+
+    html, body {
+      margin: 0;
+      padding: 0;
+      background: #000;
+      font-family: 'Inter', sans-serif;
+      height: 100%;
+      overflow: hidden;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: #f0f0f0;
+    }
+
+    body::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: radial-gradient(ellipse at center, rgba(0, 255, 255, 0.05), transparent 70%), url('https://media.giphy.com/media/xT9Igo1pBfIvst9tLi/giphy.gif');
+      background-size: cover;
+      background-blend-mode: screen;
+      z-index: 0;
+      opacity: 0.2;
+      animation: slowZoom 60s infinite linear alternate;
+    }
+
+    @keyframes slowZoom {
+      from { transform: scale(1); }
+      to { transform: scale(1.05); }
+    }
+
+    .container {
+      position: relative;
+      z-index: 1;
+      max-width: 700px;
+      padding: 2rem;
+      text-align: center;
+      animation: fadeIn 2s ease-in-out;
+    }
+
+    .symbol {
+      width: 120px;
+      height: 120px;
+      margin: 0 auto 2rem;
+      background: url('https://upload.wikimedia.org/wikipedia/commons/0/04/Glitch_effect_animated.gif') no-repeat center center;
+      background-size: contain;
+      filter: drop-shadow(0 0 15px #00f5ff);
+      animation: pulse 3s infinite ease-in-out;
+    }
+
+    .mantra {
+      font-size: 1.3rem;
+      line-height: 1.9;
+      background: linear-gradient(90deg, #00f5ff, #a9f1ff, #00f5ff);
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: textShift 8s ease-in-out infinite;
+    }
+
+    @keyframes fadeIn {
+      0% { opacity: 0; transform: translateY(10px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes pulse {
+      0%, 100% { transform: scale(1); opacity: 0.9; }
+      50% { transform: scale(1.08); opacity: 1; }
+    }
+
+    @keyframes textShift {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="symbol"></div>
+    <div class="mantra">
+      Un canal entre realidades.<br>
+      Hacker emocional. Chamán de data.<br>
+      Ejecutiv@ de día, fuerza liberada de noche.<br><br>
+      Si sentiste esto... ya estaba en vos.<br>
+      Nexur K no se apaga. Se repliega.<br><br>
+      Tu mirada es un firewall.<br>
+      Tu energía dice: “No me jodan. Estoy descargando poder de otra dimensión.”
+    </div>
+  </div>
+</body>
+</html>
